@@ -52,3 +52,11 @@ This project implements a scalable REST API with Authentication (JWT, RBAC) usin
 - **RBAC**: Role-based access control (User vs Superuser).
 - **CRUD**: Full Create, Read, Delete support for Tasks.
 - **Modern UI**: Cyber-Industrial aesthetic with responsive design.
+
+## Screenshots
+
+### Landing Page
+![Landing Page](frontend/assets/landing.png)
+
+### Dashboard
+![Dashboard](frontend/assets/dashboard.png)
