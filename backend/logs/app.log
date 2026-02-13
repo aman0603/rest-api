@@ -1,0 +1,286 @@
+{"event": "select pg_catalog.version()"}
+{"event": "[raw sql] ()"}
+{"event": "select current_schema()"}
+{"event": "[raw sql] ()"}
+{"event": "show standard_conforming_strings"}
+{"event": "[raw sql] ()"}
+{"event": "BEGIN (implicit)"}
+{"event": "SELECT pg_catalog.pg_class.relname \nFROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace \nWHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR"}
+{"event": "[generated in 0.00072s] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')"}
+{"event": "SELECT pg_catalog.pg_class.relname \nFROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace \nWHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR"}
+{"event": "[cached since 0.9773s ago] ('tasks', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')"}
+{"event": "COMMIT"}
+{"event": "Application startup complete", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T07:59:11.244499Z"}
+{"event": "Application shutdown complete", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T07:59:11.574494Z"}
+{"event": "select pg_catalog.version()"}
+{"event": "[raw sql] ()"}
+{"event": "select current_schema()"}
+{"event": "[raw sql] ()"}
+{"event": "show standard_conforming_strings"}
+{"event": "[raw sql] ()"}
+{"event": "BEGIN (implicit)"}
+{"event": "SELECT pg_catalog.pg_class.relname \nFROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace \nWHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR"}
+{"event": "[generated in 0.00079s] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')"}
+{"event": "SELECT pg_catalog.pg_class.relname \nFROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace \nWHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR"}
+{"event": "[cached since 0.9319s ago] ('tasks', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')"}
+{"event": "COMMIT"}
+{"event": "Application startup complete", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T08:03:52.756130Z"}
+{"event": "127.0.0.1:49310 - \"POST /api/v1/tasks/ HTTP/1.1\" 500"}
+{"event": "Application shutdown complete", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T08:04:58.840195Z"}
+{"event": "select pg_catalog.version()"}
+{"event": "[raw sql] ()"}
+{"event": "select current_schema()"}
+{"event": "[raw sql] ()"}
+{"event": "show standard_conforming_strings"}
+{"event": "[raw sql] ()"}
+{"event": "BEGIN (implicit)"}
+{"event": "SELECT pg_catalog.pg_class.relname \nFROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace \nWHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR"}
+{"event": "[generated in 0.00154s] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')"}
+{"event": "SELECT pg_catalog.pg_class.relname \nFROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace \nWHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR"}
+{"event": "[cached since 0.9604s ago] ('tasks', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')"}
+{"event": "COMMIT"}
+{"event": "Application startup complete", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T08:05:06.858429Z"}
+{"status_code": 403, "process_time": "0.1062s", "event": "request_processed", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T08:06:32.517213Z"}
+{"event": "127.0.0.1:60977 - \"GET /api/v1/tasks/ HTTP/1.1\" 403"}
+{"event": "BEGIN (implicit)"}
+{"event": "SELECT users.id, users.email, users.hashed_password, users.is_active, users.is_superuser \nFROM users \nWHERE users.email = $1::VARCHAR"}
+{"event": "[generated in 0.00191s] ('user@example.com',)"}
+{"user_id": 3, "email": "user@example.com", "event": "login_success", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T08:06:40.123183Z"}
+{"status_code": 200, "process_time": "1.3787s", "event": "request_processed", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T08:06:40.125199Z"}
+{"event": "127.0.0.1:64295 - \"POST /api/v1/auth/access-token HTTP/1.1\" 200"}
+{"event": "ROLLBACK"}
+{"event": "BEGIN (implicit)"}
+{"event": "SELECT users.id, users.email, users.hashed_password, users.is_active, users.is_superuser \nFROM users \nWHERE users.email = $1::VARCHAR"}
+{"event": "[cached since 17.76s ago] ('user@example.com',)"}
+{"event": "SELECT tasks.id, tasks.title, tasks.description, tasks.owner_id \nFROM tasks \nWHERE tasks.owner_id = $1::INTEGER \n LIMIT $2::INTEGER OFFSET $3::INTEGER"}
+{"event": "[generated in 0.00135s] (3, 100, 0)"}
+{"status_code": 200, "process_time": "1.2819s", "event": "request_processed", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T08:06:57.798593Z"}
+{"event": "127.0.0.1:64299 - \"GET /api/v1/tasks/ HTTP/1.1\" 200"}
+{"event": "ROLLBACK"}
+{"event": "BEGIN (implicit)"}
+{"event": "SELECT users.id, users.email, users.hashed_password, users.is_active, users.is_superuser \nFROM users \nWHERE users.email = $1::VARCHAR"}
+{"event": "[cached since 54.62s ago] ('user@example.com',)"}
+{"event": "INSERT INTO tasks (title, description, owner_id) VALUES ($1::VARCHAR, $2::VARCHAR, $3::INTEGER) RETURNING tasks.id"}
+{"event": "[generated in 0.00237s] ('Complete FRONTEND Documentation', 'Write a detailed README for the API INTEGRATION.', 3)"}
+{"event": "COMMIT"}
+{"event": "BEGIN (implicit)"}
+{"event": "SELECT tasks.id, tasks.title, tasks.description, tasks.owner_id \nFROM tasks \nWHERE tasks.id = $1::INTEGER"}
+{"event": "[generated in 0.00108s] (5,)"}
+{"task_id": 5, "owner_id": 3, "title": "Complete FRONTEND Documentation", "event": "task_created", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T08:07:35.949720Z"}
+{"status_code": 200, "process_time": "2.5750s", "event": "request_processed", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T08:07:35.950725Z"}
+{"event": "127.0.0.1:52990 - \"POST /api/v1/tasks/ HTTP/1.1\" 200"}
+{"event": "ROLLBACK"}
+{"event": "BEGIN (implicit)"}
+{"event": "SELECT users.id, users.email, users.hashed_password, users.is_active, users.is_superuser \nFROM users \nWHERE users.email = $1::VARCHAR"}
+{"event": "[cached since 66.49s ago] ('user@example.com',)"}
+{"event": "SELECT tasks.id, tasks.title, tasks.description, tasks.owner_id \nFROM tasks \nWHERE tasks.owner_id = $1::INTEGER \n LIMIT $2::INTEGER OFFSET $3::INTEGER"}
+{"event": "[cached since 48.73s ago] (3, 100, 0)"}
+{"status_code": 200, "process_time": "0.9583s", "event": "request_processed", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T08:07:46.209995Z"}
+{"event": "127.0.0.1:52995 - \"GET /api/v1/tasks/ HTTP/1.1\" 200"}
+{"event": "ROLLBACK"}
+{"status_code": 405, "process_time": "0.0022s", "event": "request_processed", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T08:08:13.858328Z"}
+{"event": "127.0.0.1:53001 - \"POST /api/v1/tasks/4 HTTP/1.1\" 405"}
+{"status_code": 403, "process_time": "0.0020s", "event": "request_processed", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T08:08:21.048470Z"}
+{"event": "127.0.0.1:53004 - \"GET /api/v1/tasks/4 HTTP/1.1\" 403"}
+{"event": "BEGIN (implicit)"}
+{"event": "SELECT users.id, users.email, users.hashed_password, users.is_active, users.is_superuser \nFROM users \nWHERE users.email = $1::VARCHAR"}
+{"event": "[cached since 118s ago] ('user@example.com',)"}
+{"event": "SELECT tasks.id, tasks.title, tasks.description, tasks.owner_id \nFROM tasks \nWHERE tasks.id = $1::INTEGER"}
+{"event": "[generated in 0.00100s] (4,)"}
+{"status_code": 200, "process_time": "0.9836s", "event": "request_processed", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T08:08:37.712959Z"}
+{"event": "127.0.0.1:60023 - \"GET /api/v1/tasks/4 HTTP/1.1\" 200"}
+{"event": "ROLLBACK"}
+{"event": "BEGIN (implicit)"}
+{"event": "SELECT users.id, users.email, users.hashed_password, users.is_active, users.is_superuser \nFROM users \nWHERE users.email = $1::VARCHAR"}
+{"event": "[cached since 205.3s ago] ('amanpaswan@gmail.com',)"}
+{"email": "amanpaswan@gmail.com", "reason": "invalid_credentials", "event": "login_failed", "logger": "app.main", "level": "warning", "timestamp": "2026-02-13T08:10:05.154974Z"}
+{"event": "ROLLBACK"}
+{"status_code": 400, "process_time": "1.3846s", "event": "request_processed", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T08:10:05.476613Z"}
+{"event": "127.0.0.1:55808 - \"POST /api/v1/auth/access-token HTTP/1.1\" 400"}
+{"event": "BEGIN (implicit)"}
+{"event": "SELECT users.id, users.email, users.hashed_password, users.is_active, users.is_superuser \nFROM users \nWHERE users.email = $1::VARCHAR"}
+{"event": "[cached since 208.9s ago] ('amanpaswan@gmail.com',)"}
+{"email": "amanpaswan@gmail.com", "reason": "invalid_credentials", "event": "login_failed", "logger": "app.main", "level": "warning", "timestamp": "2026-02-13T08:10:08.827094Z"}
+{"event": "ROLLBACK"}
+{"status_code": 400, "process_time": "1.4687s", "event": "request_processed", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T08:10:09.150222Z"}
+{"event": "127.0.0.1:55808 - \"POST /api/v1/auth/access-token HTTP/1.1\" 400"}
+{"event": "BEGIN (implicit)"}
+{"event": "SELECT users.id, users.email, users.hashed_password, users.is_active, users.is_superuser \nFROM users \nWHERE users.email = $1::VARCHAR"}
+{"event": "[cached since 223.5s ago] ('amanpaswan@gmail.com',)"}
+{"user_id": 1, "email": "amanpaswan@gmail.com", "event": "login_success", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T08:10:23.293317Z"}
+{"status_code": 200, "process_time": "1.0854s", "event": "request_processed", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T08:10:23.294457Z"}
+{"event": "127.0.0.1:54243 - \"POST /api/v1/auth/access-token HTTP/1.1\" 200"}
+{"event": "ROLLBACK"}
+{"event": "127.0.0.1:54243 - \"OPTIONS /api/v1/tasks/ HTTP/1.1\" 200"}
+{"event": "BEGIN (implicit)"}
+{"event": "SELECT users.id, users.email, users.hashed_password, users.is_active, users.is_superuser \nFROM users \nWHERE users.email = $1::VARCHAR"}
+{"event": "[cached since 226.6s ago] ('amanpaswan@gmail.com',)"}
+{"event": "SELECT tasks.id, tasks.title, tasks.description, tasks.owner_id \nFROM tasks \n LIMIT $1::INTEGER OFFSET $2::INTEGER"}
+{"event": "[generated in 0.00214s] (100, 0)"}
+{"status_code": 200, "process_time": "3.5199s", "event": "request_processed", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T08:10:26.904641Z"}
+{"event": "127.0.0.1:54243 - \"GET /api/v1/tasks/ HTTP/1.1\" 200"}
+{"event": "ROLLBACK"}
+{"event": "BEGIN (implicit)"}
+{"event": "SELECT users.id, users.email, users.hashed_password, users.is_active, users.is_superuser \nFROM users \nWHERE users.email = $1::VARCHAR"}
+{"event": "[cached since 228.2s ago] ('amanpaswan@gmail.com',)"}
+{"event": "SELECT tasks.id, tasks.title, tasks.description, tasks.owner_id \nFROM tasks \n LIMIT $1::INTEGER OFFSET $2::INTEGER"}
+{"event": "[cached since 1.273s ago] (100, 0)"}
+{"status_code": 200, "process_time": "1.2814s", "event": "request_processed", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T08:10:28.191874Z"}
+{"event": "127.0.0.1:54243 - \"GET /api/v1/tasks/ HTTP/1.1\" 200"}
+{"event": "ROLLBACK"}
+{"event": "127.0.0.1:60666 - \"OPTIONS /api/v1/tasks/1 HTTP/1.1\" 200"}
+{"event": "BEGIN (implicit)"}
+{"event": "SELECT users.id, users.email, users.hashed_password, users.is_active, users.is_superuser \nFROM users \nWHERE users.email = $1::VARCHAR"}
+{"event": "[cached since 249.5s ago] ('amanpaswan@gmail.com',)"}
+{"event": "SELECT tasks.id, tasks.title, tasks.description, tasks.owner_id \nFROM tasks \nWHERE tasks.id = $1::INTEGER"}
+{"event": "[cached since 131.5s ago] (1,)"}
+{"event": "SELECT tasks.id, tasks.title, tasks.description, tasks.owner_id \nFROM tasks \nWHERE tasks.id = $1::INTEGER"}
+{"event": "[cached since 132.1s ago] (1,)"}
+{"event": "BEGIN (implicit)"}
+{"event": "SELECT users.id, users.email, users.hashed_password, users.is_active, users.is_superuser \nFROM users \nWHERE users.email = $1::VARCHAR"}
+{"event": "[cached since 250.8s ago] ('amanpaswan@gmail.com',)"}
+{"event": "DELETE FROM tasks WHERE tasks.id = $1::INTEGER"}
+{"event": "[generated in 0.00193s] (1,)"}
+{"event": "SELECT tasks.id, tasks.title, tasks.description, tasks.owner_id \nFROM tasks \nWHERE tasks.id = $1::INTEGER"}
+{"event": "[cached since 132.9s ago] (1,)"}
+{"event": "COMMIT"}
+{"event": "SELECT tasks.id, tasks.title, tasks.description, tasks.owner_id \nFROM tasks \nWHERE tasks.id = $1::INTEGER"}
+{"event": "[cached since 133.2s ago] (1,)"}
+{"task_id": 1, "user_id": 1, "event": "task_deleted", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T08:10:50.747850Z"}
+{"status_code": 200, "process_time": "2.5364s", "event": "request_processed", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T08:10:50.748844Z"}
+{"event": "127.0.0.1:60666 - \"DELETE /api/v1/tasks/1 HTTP/1.1\" 200"}
+{"task_id": 1, "user_id": 1, "event": "task_deleted", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T08:10:50.883908Z"}
+{"event": "ROLLBACK"}
+{"event": "127.0.0.1:60666 - \"OPTIONS /api/v1/tasks/2 HTTP/1.1\" 200"}
+{"event": "BEGIN (implicit)"}
+{"event": "SELECT users.id, users.email, users.hashed_password, users.is_active, users.is_superuser \nFROM users \nWHERE users.email = $1::VARCHAR"}
+{"event": "[cached since 252.3s ago] ('amanpaswan@gmail.com',)"}
+{"error": "1 validation error:\n  {'type': 'model_attributes_type', 'loc': ('response',), 'msg': 'Input should be a valid dictionary or object to extract fields from', 'input': None}\n\n  File \"C:\\Users\\amanp\\Desktop\\internshala\\backend\\backend\\app\\api\\v1\\endpoints\\tasks.py\", line 61, in delete_task\n    DELETE /api/v1/tasks/{id}", "process_time": "1.6699s", "event": "request_failed", "logger": "app.main", "level": "error", "timestamp": "2026-02-13T08:10:51.262350Z"}
+{"event": "127.0.0.1:65461 - \"DELETE /api/v1/tasks/1 HTTP/1.1\" 500"}
+{"event": "SELECT tasks.id, tasks.title, tasks.description, tasks.owner_id \nFROM tasks \nWHERE tasks.id = $1::INTEGER"}
+{"event": "[cached since 134.4s ago] (2,)"}
+{"event": "SELECT tasks.id, tasks.title, tasks.description, tasks.owner_id \nFROM tasks \nWHERE tasks.id = $1::INTEGER"}
+{"event": "[cached since 134.7s ago] (2,)"}
+{"event": "DELETE FROM tasks WHERE tasks.id = $1::INTEGER"}
+{"event": "[cached since 2.59s ago] (2,)"}
+{"event": "BEGIN (implicit)"}
+{"event": "SELECT users.id, users.email, users.hashed_password, users.is_active, users.is_superuser \nFROM users \nWHERE users.email = $1::VARCHAR"}
+{"event": "[cached since 254s ago] ('amanpaswan@gmail.com',)"}
+{"event": "COMMIT"}
+{"task_id": 2, "user_id": 1, "event": "task_deleted", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T08:10:53.068369Z"}
+{"status_code": 200, "process_time": "2.0525s", "event": "request_processed", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T08:10:53.075088Z"}
+{"event": "127.0.0.1:60666 - \"DELETE /api/v1/tasks/2 HTTP/1.1\" 200"}
+{"event": "SELECT tasks.id, tasks.title, tasks.description, tasks.owner_id \nFROM tasks \nWHERE tasks.id = $1::INTEGER"}
+{"event": "[cached since 136s ago] (2,)"}
+{"task_id": 2, "user_id": 1, "reason": "not_found", "event": "task_delete_failed", "logger": "app.main", "level": "warning", "timestamp": "2026-02-13T08:10:53.699911Z"}
+{"event": "ROLLBACK"}
+{"status_code": 404, "process_time": "1.2801s", "event": "request_processed", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T08:10:54.019047Z"}
+{"event": "127.0.0.1:60876 - \"DELETE /api/v1/tasks/2 HTTP/1.1\" 404"}
+{"event": "127.0.0.1:56444 - \"OPTIONS /api/v1/tasks/3 HTTP/1.1\" 200"}
+{"event": "BEGIN (implicit)"}
+{"event": "SELECT users.id, users.email, users.hashed_password, users.is_active, users.is_superuser \nFROM users \nWHERE users.email = $1::VARCHAR"}
+{"event": "[cached since 332s ago] ('amanpaswan@gmail.com',)"}
+{"event": "SELECT tasks.id, tasks.title, tasks.description, tasks.owner_id \nFROM tasks \nWHERE tasks.id = $1::INTEGER"}
+{"event": "[cached since 214.1s ago] (3,)"}
+{"event": "SELECT tasks.id, tasks.title, tasks.description, tasks.owner_id \nFROM tasks \nWHERE tasks.id = $1::INTEGER"}
+{"event": "[cached since 214.4s ago] (3,)"}
+{"event": "DELETE FROM tasks WHERE tasks.id = $1::INTEGER"}
+{"event": "[cached since 82.29s ago] (3,)"}
+{"event": "COMMIT"}
+{"task_id": 3, "user_id": 1, "event": "task_deleted", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T08:12:12.710382Z"}
+{"status_code": 200, "process_time": "1.9054s", "event": "request_processed", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T08:12:12.711943Z"}
+{"event": "127.0.0.1:56444 - \"DELETE /api/v1/tasks/3 HTTP/1.1\" 200"}
+{"event": "Application shutdown complete", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T08:12:29.380246Z"}
+{"event": "select pg_catalog.version()"}
+{"event": "[raw sql] ()"}
+{"event": "select current_schema()"}
+{"event": "[raw sql] ()"}
+{"event": "show standard_conforming_strings"}
+{"event": "[raw sql] ()"}
+{"event": "BEGIN (implicit)"}
+{"event": "SELECT pg_catalog.pg_class.relname \nFROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace \nWHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR"}
+{"event": "[generated in 0.00067s] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')"}
+{"event": "SELECT pg_catalog.pg_class.relname \nFROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace \nWHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR"}
+{"event": "[cached since 0.8762s ago] ('tasks', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')"}
+{"event": "COMMIT"}
+{"event": "Application startup complete", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T08:12:36.818650Z"}
+{"event": "select pg_catalog.version()"}
+{"event": "[raw sql] ()"}
+{"event": "select current_schema()"}
+{"event": "[raw sql] ()"}
+{"event": "show standard_conforming_strings"}
+{"event": "[raw sql] ()"}
+{"event": "BEGIN (implicit)"}
+{"event": "SELECT pg_catalog.pg_class.relname \nFROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace \nWHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR"}
+{"event": "[generated in 0.00084s] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')"}
+{"event": "SELECT pg_catalog.pg_class.relname \nFROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace \nWHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR"}
+{"event": "[cached since 0.9209s ago] ('tasks', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')"}
+{"event": "COMMIT"}
+{"event": "Application startup complete", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T08:12:44.382717Z"}
+{"event": "BEGIN (implicit)"}
+{"event": "SELECT users.id, users.email, users.hashed_password, users.is_active, users.is_superuser \nFROM users \nWHERE users.email = $1::VARCHAR"}
+{"event": "[generated in 0.00308s] ('amanpaswan@gmail.com',)"}
+{"event": "SELECT tasks.id, tasks.title, tasks.description, tasks.owner_id \nFROM tasks \n LIMIT $1::INTEGER OFFSET $2::INTEGER"}
+{"event": "[generated in 0.00131s] (100, 0)"}
+{"status_code": 200, "process_time": "1.6509s", "event": "request_processed", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T08:12:55.549513Z"}
+{"event": "127.0.0.1:57189 - \"GET /api/v1/tasks/ HTTP/1.1\" 200"}
+{"event": "ROLLBACK"}
+{"event": "127.0.0.1:57189 - \"OPTIONS /api/v1/tasks/4 HTTP/1.1\" 200"}
+{"event": "BEGIN (implicit)"}
+{"event": "SELECT users.id, users.email, users.hashed_password, users.is_active, users.is_superuser \nFROM users \nWHERE users.email = $1::VARCHAR"}
+{"event": "[cached since 3.607s ago] ('amanpaswan@gmail.com',)"}
+{"event": "SELECT tasks.id, tasks.title, tasks.description, tasks.owner_id \nFROM tasks \nWHERE tasks.id = $1::INTEGER"}
+{"event": "[generated in 0.00246s] (4,)"}
+{"event": "DELETE FROM tasks WHERE tasks.id = $1::INTEGER"}
+{"event": "[generated in 0.00247s] (4,)"}
+{"event": "COMMIT"}
+{"task_id": 4, "user_id": 1, "event": "task_deleted", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T08:12:59.780315Z"}
+{"status_code": 200, "process_time": "2.1693s", "event": "request_processed", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T08:12:59.781796Z"}
+{"event": "127.0.0.1:57189 - \"DELETE /api/v1/tasks/4 HTTP/1.1\" 200"}
+{"event": "BEGIN (implicit)"}
+{"event": "SELECT users.id, users.email, users.hashed_password, users.is_active, users.is_superuser \nFROM users \nWHERE users.email = $1::VARCHAR"}
+{"event": "[cached since 51.31s ago] ('user@example.com',)"}
+{"user_id": 3, "email": "user@example.com", "event": "login_success", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T08:13:46.357038Z"}
+{"status_code": 200, "process_time": "1.0457s", "event": "request_processed", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T08:13:46.359613Z"}
+{"event": "127.0.0.1:65415 - \"POST /api/v1/auth/access-token HTTP/1.1\" 200"}
+{"event": "ROLLBACK"}
+{"event": "BEGIN (implicit)"}
+{"event": "SELECT users.id, users.email, users.hashed_password, users.is_active, users.is_superuser \nFROM users \nWHERE users.email = $1::VARCHAR"}
+{"event": "[cached since 54.39s ago] ('user@example.com',)"}
+{"event": "SELECT tasks.id, tasks.title, tasks.description, tasks.owner_id \nFROM tasks \nWHERE tasks.owner_id = $1::INTEGER \n LIMIT $2::INTEGER OFFSET $3::INTEGER"}
+{"event": "[generated in 0.00183s] (3, 100, 0)"}
+{"status_code": 200, "process_time": "3.5659s", "event": "request_processed", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T08:13:49.987877Z"}
+{"event": "127.0.0.1:65415 - \"GET /api/v1/tasks/ HTTP/1.1\" 200"}
+{"event": "ROLLBACK"}
+{"event": "BEGIN (implicit)"}
+{"event": "SELECT users.id, users.email, users.hashed_password, users.is_active, users.is_superuser \nFROM users \nWHERE users.email = $1::VARCHAR"}
+{"event": "[cached since 55.99s ago] ('user@example.com',)"}
+{"event": "SELECT tasks.id, tasks.title, tasks.description, tasks.owner_id \nFROM tasks \nWHERE tasks.owner_id = $1::INTEGER \n LIMIT $2::INTEGER OFFSET $3::INTEGER"}
+{"event": "[cached since 1.26s ago] (3, 100, 0)"}
+{"status_code": 200, "process_time": "1.2334s", "event": "request_processed", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T08:13:51.229040Z"}
+{"event": "127.0.0.1:65415 - \"GET /api/v1/tasks/ HTTP/1.1\" 200"}
+{"event": "ROLLBACK"}
+{"event": "127.0.0.1:65415 - \"OPTIONS /api/v1/tasks/5 HTTP/1.1\" 200"}
+{"event": "BEGIN (implicit)"}
+{"event": "SELECT users.id, users.email, users.hashed_password, users.is_active, users.is_superuser \nFROM users \nWHERE users.email = $1::VARCHAR"}
+{"event": "[cached since 58.1s ago] ('user@example.com',)"}
+{"event": "SELECT tasks.id, tasks.title, tasks.description, tasks.owner_id \nFROM tasks \nWHERE tasks.id = $1::INTEGER"}
+{"event": "[cached since 54.51s ago] (5,)"}
+{"event": "DELETE FROM tasks WHERE tasks.id = $1::INTEGER"}
+{"event": "[cached since 54.52s ago] (5,)"}
+{"event": "COMMIT"}
+{"task_id": 5, "user_id": 3, "event": "task_deleted", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T08:13:54.329427Z"}
+{"status_code": 200, "process_time": "2.2255s", "event": "request_processed", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T08:13:54.331005Z"}
+{"event": "127.0.0.1:65415 - \"DELETE /api/v1/tasks/5 HTTP/1.1\" 200"}
+{"event": "select pg_catalog.version()"}
+{"event": "[raw sql] ()"}
+{"event": "select current_schema()"}
+{"event": "[raw sql] ()"}
+{"event": "show standard_conforming_strings"}
+{"event": "[raw sql] ()"}
+{"event": "BEGIN (implicit)"}
+{"event": "SELECT users.id, users.email, users.hashed_password, users.is_active, users.is_superuser \nFROM users \nWHERE users.email = $1::VARCHAR"}
+{"event": "[generated in 0.00116s] ('vikas@gmail.com',)"}
+{"event": "INSERT INTO users (email, hashed_password, is_active, is_superuser) VALUES ($1::VARCHAR, $2::VARCHAR, $3::BOOLEAN, $4::BOOLEAN) RETURNING users.id"}
+{"event": "[generated in 0.00077s] ('vikas@gmail.com', '$2b$12$xhFJDO3r0D3T9wIYI6aqPu.xuGf.cTrqysSxm.o7PLFeAoi.s3i82', True, True)"}
+{"event": "COMMIT"}
