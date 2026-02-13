@@ -27,7 +27,7 @@ class Settings(BaseSettings):
         if "?" in uri:
             base, query = uri.split("?", 1)
             params = query.split("&")
-            filtered = [p for p in params if not p.startswith("sslmode=")]
+            filtered = [p for p in params if not p.startswith("sslmode=") and not p.startswith("channel_binding=")]
             if filtered:
                 uri = f"{base}?{'&'.join(filtered)}"
             else:
