@@ -22,6 +22,16 @@ class Settings(BaseSettings):
             uri = uri.replace("postgres://", "postgresql+asyncpg://", 1)
         elif uri.startswith("postgresql://"):
             uri = uri.replace("postgresql://", "postgresql+asyncpg://", 1)
+            
+        # Strip sslmode if present, as asyncpg doesn't support it in connect() kwargs
+        if "?" in uri:
+            base, query = uri.split("?", 1)
+            params = query.split("&")
+            filtered = [p for p in params if not p.startswith("sslmode=")]
+            if filtered:
+                uri = f"{base}?{'&'.join(filtered)}"
+            else:
+                uri = base
         
         return uri
     
