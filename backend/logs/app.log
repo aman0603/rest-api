@@ -363,3 +363,4 @@
 {"status_code": 200, "process_time": "0.0342s", "event": "request_processed", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T10:04:18.210212Z"}
 {"event": "172.21.0.1:52452 - \"GET /api/v1/tasks/ HTTP/1.1\" 200"}
 {"event": "ROLLBACK"}
+{"event": "Application shutdown complete", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T11:36:39.249404Z"}

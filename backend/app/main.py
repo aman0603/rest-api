@@ -40,6 +40,13 @@ async def logging_middleware(request: Request, call_next):
         path=request.url.path,
         client_ip=request.client.host if request.client else "unknown",
     )
+    
+    # Debug Auth Header
+    auth_header = request.headers.get("Authorization")
+    if auth_header:
+        logger.info("auth_header_present", prefix=auth_header[:7] if auth_header else "None")
+    else:
+        logger.info("auth_header_missing", path=request.url.path)
 
     try:
         response = await call_next(request)
@@ -63,7 +70,8 @@ async def logging_middleware(request: Request, call_next):
 # Set all CORS enabled origins
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    # allow_origins=["*"],  # Don't use * with credentials
+    allow_origin_regex="https?://.*", # Allow all http/https origins (for dev/demo purposes)
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
