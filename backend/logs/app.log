@@ -284,3 +284,82 @@
 {"event": "INSERT INTO users (email, hashed_password, is_active, is_superuser) VALUES ($1::VARCHAR, $2::VARCHAR, $3::BOOLEAN, $4::BOOLEAN) RETURNING users.id"}
 {"event": "[generated in 0.00077s] ('vikas@gmail.com', '$2b$12$xhFJDO3r0D3T9wIYI6aqPu.xuGf.cTrqysSxm.o7PLFeAoi.s3i82', True, True)"}
 {"event": "COMMIT"}
+{"event": "select pg_catalog.version()"}
+{"event": "[raw sql] ()"}
+{"event": "select current_schema()"}
+{"event": "[raw sql] ()"}
+{"event": "show standard_conforming_strings"}
+{"event": "[raw sql] ()"}
+{"event": "BEGIN (implicit)"}
+{"event": "SELECT pg_catalog.pg_class.relname \nFROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace \nWHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR"}
+{"event": "[generated in 0.00223s] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')"}
+{"event": "SELECT pg_catalog.pg_class.relname \nFROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace \nWHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR"}
+{"event": "[cached since 0.0106s ago] ('tasks', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')"}
+{"event": "\nCREATE TABLE users (\n\tid SERIAL NOT NULL, \n\temail VARCHAR, \n\thashed_password VARCHAR, \n\tis_active BOOLEAN, \n\tis_superuser BOOLEAN, \n\tPRIMARY KEY (id)\n)\n\n"}
+{"event": "[no key 0.00393s] ()"}
+{"event": "CREATE UNIQUE INDEX ix_users_email ON users (email)"}
+{"event": "[no key 0.00170s] ()"}
+{"event": "CREATE INDEX ix_users_id ON users (id)"}
+{"event": "[no key 0.00262s] ()"}
+{"event": "\nCREATE TABLE tasks (\n\tid SERIAL NOT NULL, \n\ttitle VARCHAR, \n\tdescription VARCHAR, \n\towner_id INTEGER, \n\tPRIMARY KEY (id), \n\tFOREIGN KEY(owner_id) REFERENCES users (id)\n)\n\n"}
+{"event": "[no key 0.00214s] ()"}
+{"event": "CREATE INDEX ix_tasks_description ON tasks (description)"}
+{"event": "[no key 0.00170s] ()"}
+{"event": "CREATE INDEX ix_tasks_id ON tasks (id)"}
+{"event": "[no key 0.00204s] ()"}
+{"event": "CREATE INDEX ix_tasks_title ON tasks (title)"}
+{"event": "[no key 0.00251s] ()"}
+{"event": "COMMIT"}
+{"event": "Application startup complete", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T10:02:40.442386Z"}
+{"event": "172.21.0.1:57526 - \"OPTIONS /api/v1/auth/access-token HTTP/1.1\" 200"}
+{"event": "BEGIN (implicit)"}
+{"event": "SELECT users.id, users.email, users.hashed_password, users.is_active, users.is_superuser \nFROM users \nWHERE users.email = $1::VARCHAR"}
+{"event": "[generated in 0.00124s] ('amanpaswan@gmail.com',)"}
+{"email": "amanpaswan@gmail.com", "reason": "invalid_credentials", "event": "login_failed", "logger": "app.main", "level": "warning", "timestamp": "2026-02-13T10:03:35.797234Z"}
+{"event": "ROLLBACK"}
+{"status_code": 400, "process_time": "0.0537s", "event": "request_processed", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T10:03:35.800685Z"}
+{"event": "172.21.0.1:57526 - \"POST /api/v1/auth/access-token HTTP/1.1\" 400"}
+{"event": "BEGIN (implicit)"}
+{"event": "SELECT users.id, users.email, users.hashed_password, users.is_active, users.is_superuser \nFROM users \nWHERE users.email = $1::VARCHAR"}
+{"event": "[cached since 14.11s ago] ('amanpaswan@gmail.com',)"}
+{"email": "amanpaswan@gmail.com", "reason": "invalid_credentials", "event": "login_failed", "logger": "app.main", "level": "warning", "timestamp": "2026-02-13T10:03:49.897035Z"}
+{"event": "ROLLBACK"}
+{"status_code": 400, "process_time": "0.0108s", "event": "request_processed", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T10:03:49.900315Z"}
+{"event": "172.21.0.1:57532 - \"POST /api/v1/auth/access-token HTTP/1.1\" 400"}
+{"event": "BEGIN (implicit)"}
+{"event": "SELECT users.id, users.email, users.hashed_password, users.is_active, users.is_superuser \nFROM users \nWHERE users.email = $1::VARCHAR"}
+{"event": "[cached since 16.3s ago] ('amanpaswan@gmail.com',)"}
+{"email": "amanpaswan@gmail.com", "reason": "invalid_credentials", "event": "login_failed", "logger": "app.main", "level": "warning", "timestamp": "2026-02-13T10:03:52.082420Z"}
+{"event": "ROLLBACK"}
+{"status_code": 400, "process_time": "0.0109s", "event": "request_processed", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T10:03:52.085863Z"}
+{"event": "172.21.0.1:57532 - \"POST /api/v1/auth/access-token HTTP/1.1\" 400"}
+{"event": "172.21.0.1:52450 - \"OPTIONS /api/v1/auth/register HTTP/1.1\" 200"}
+{"event": "BEGIN (implicit)"}
+{"event": "SELECT users.id, users.email, users.hashed_password, users.is_active, users.is_superuser \nFROM users \nWHERE users.email = $1::VARCHAR"}
+{"event": "[cached since 30.9s ago] ('amanpaswan@gmail.com',)"}
+{"event": "INSERT INTO users (email, hashed_password, is_active, is_superuser) VALUES ($1::VARCHAR, $2::VARCHAR, $3::BOOLEAN, $4::BOOLEAN) RETURNING users.id"}
+{"event": "[generated in 0.00254s] ('amanpaswan@gmail.com', '$2b$12$1xLEXD704iiy1upiTZO0GumFT2uNP7jIHpVYcrlBjwO8gaXFHenJa', True, False)"}
+{"event": "COMMIT"}
+{"event": "BEGIN (implicit)"}
+{"event": "SELECT users.id, users.email, users.hashed_password, users.is_active, users.is_superuser \nFROM users \nWHERE users.id = $1::INTEGER"}
+{"event": "[generated in 0.00132s] (1,)"}
+{"user_id": 1, "email": "amanpaswan@gmail.com", "event": "user_registered", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T10:04:06.918824Z"}
+{"status_code": 200, "process_time": "0.3422s", "event": "request_processed", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T10:04:06.923362Z"}
+{"event": "172.21.0.1:52450 - \"POST /api/v1/auth/register HTTP/1.1\" 200"}
+{"event": "ROLLBACK"}
+{"event": "BEGIN (implicit)"}
+{"event": "SELECT users.id, users.email, users.hashed_password, users.is_active, users.is_superuser \nFROM users \nWHERE users.email = $1::VARCHAR"}
+{"event": "[cached since 42.09s ago] ('amanpaswan@gmail.com',)"}
+{"user_id": 1, "email": "amanpaswan@gmail.com", "event": "login_success", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T10:04:18.071364Z"}
+{"status_code": 200, "process_time": "0.2333s", "event": "request_processed", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T10:04:18.096476Z"}
+{"event": "172.21.0.1:52452 - \"POST /api/v1/auth/access-token HTTP/1.1\" 200"}
+{"event": "ROLLBACK"}
+{"event": "172.21.0.1:52452 - \"OPTIONS /api/v1/tasks/ HTTP/1.1\" 200"}
+{"event": "BEGIN (implicit)"}
+{"event": "SELECT users.id, users.email, users.hashed_password, users.is_active, users.is_superuser \nFROM users \nWHERE users.email = $1::VARCHAR"}
+{"event": "[cached since 42.42s ago] ('amanpaswan@gmail.com',)"}
+{"event": "SELECT tasks.id, tasks.title, tasks.description, tasks.owner_id \nFROM tasks \nWHERE tasks.owner_id = $1::INTEGER \n LIMIT $2::INTEGER OFFSET $3::INTEGER"}
+{"event": "[generated in 0.00140s] (1, 100, 0)"}
+{"status_code": 200, "process_time": "0.0342s", "event": "request_processed", "logger": "app.main", "level": "info", "timestamp": "2026-02-13T10:04:18.210212Z"}
+{"event": "172.21.0.1:52452 - \"GET /api/v1/tasks/ HTTP/1.1\" 200"}
+{"event": "ROLLBACK"}
