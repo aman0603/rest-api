@@ -2,6 +2,9 @@
 
 This project implements a scalable REST API with Authentication (JWT, RBAC) using FastAPI and a modern Frontend using Next.js.
 
+## 🚀 Deployed Frontend
+**Live Demo**: [https://rest-api-ten-sigma.vercel.app/](https://rest-api-ten-sigma.vercel.app/)
+
 ## Tech Stack
 - **Backend**: FastAPI, SQLAlchemy (Async), PostgreSQL, Pydantic, Alembic.
 - **Frontend**: Next.js (App Router), TailwindCSS, Axios, Lucide React.
